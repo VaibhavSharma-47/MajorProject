@@ -25,9 +25,6 @@
 			</div>	
 		</div>
 		<div id="tweets"></div>
-		<footer class="text-center">
-			Made with ❤ | <a href="https://github.com/rhnvrm/labeled-tweet-generator">Github</a> | <a href="http://rohanverma.net">Rohan Verma</a>
-		</footer>	</div>
 	<script type="text/javascript">
 
 	 var current_data;
@@ -43,7 +40,7 @@
 			    url: 'tweets',
 			    data: {'query': querystring, 'retweets_only': 'false', 'with_sentiment': 'true'},
 			    dataType: 'json',
-			    type: 'GET',
+				type: 'GET',
 			    success: function(data) {
 			    	buildChart(data);
 			    	current_data = data['data'];
@@ -53,9 +50,18 @@
 			        contents+='<div>'
 			        
 			        for(i = 0; i < tweets.length; i++){
-			        	contents+= '<div class="panel '+ sentiment_to_color(tweets[i].sentiment) +'"> <div class="panel-heading"> <h3 class="panel-title">'+ tweets[i].user +'</h3> </div> <div class="panel-body"><blockquote>'+ tweets[i].text + '</blockquote> </div> </div>'
-                        // contents += '<li class="list-group-item '+ sentiment_to_color(tweets[i].sentiment) +'">'+ tweets[i].user + ": " + tweets[i].text + '</li>';
-			        }
+						contents+= 
+						'<div class="panel '+ sentiment_to_color(tweets[i].sentiment) +'"> \
+							<div class="panel-heading"> \
+								<h3 class="panel-title">'
+									+ tweets[i].user +' \
+								</h3> \
+							</div> \
+							<div class="panel-body"> \
+								<blockquote>'+ tweets[i].text + '</blockquote> \
+							</div> \
+						</div>'
+                    }
                     
                     contents+='</div>';
 			        container.html(contents);

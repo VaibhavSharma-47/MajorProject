@@ -15,8 +15,8 @@ class TwitterClient(object):
         # keys and tokens from the Twitter Dev Console
         consumer_key = "lKbfDHquTGdMcGqfAk4gD4DPv"
         consumer_secret = "KdcyOEIWORjf8x0QEQ9xlUFhXwo079QlzAfYodoYxEN7Yk8aFR"
-        access_token = "3236182615-nhznW1v4Wk3EXWFiVwyIvTzbE4WulDX9FoXGiXf"
-        access_token_secret = "jXUlQumFU3wckUICE5UKsVvub8pJqBqLYfVvVF25erU3r"
+        access_token = "3236182615-JbfrSKOzpQSs84TmnlVQ1EawberMQvIythdA72t"
+        access_token_secret = "bVZI01gc2me9OYjp61duIthE69I1adUSgTYN5JAUUmWcu"
         # Attempt authentication
         try:
             self.auth = OAuthHandler(consumer_key, consumer_secret)

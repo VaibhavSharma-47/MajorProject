@@ -1,10 +1,8 @@
-# author = rhnvrm <hello@rohanverma.net>
 import os
 from flask import Flask, request, render_template, jsonify
 from twitter import TwitterClient
 
 app = Flask(__name__)
-# Setup the client <query string, retweets_only bool, with_sentiment bool>
 api = TwitterClient('@Sirajology')
 
 
